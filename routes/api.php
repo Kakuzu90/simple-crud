@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/users', [VueController::class, 'index']);
+Route::post('/user', [VueController::class, 'store']);
+Route::get('/user/{id}', [VueController::class, 'show']);
+Route::put('/user/{id}/update', [VueController::class, 'edit']);
+Route::delete('/user/{id}/delete', [VueController::class, 'destroy']);
