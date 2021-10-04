@@ -2395,14 +2395,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     dynamicSort: function dynamicSort(key, sort) {
       var _this5 = this;
 
-      var local = this.search ? this.search : '*'; // return function (a, b) {
+      // return function (a, b) {
       //     if (sort == 1) {
       //         return a[key].localeCompare(b[key]);
       //     }else {
       //         return b[key].localeCompare(a[key]);
       //     }
       // }
-
+      var local = this.search ? this.search : '*';
       this.axios.get("/api/search/".concat(local, "/").concat(key, "/").concat(sort)).then(function (result) {
         _this5.tables = result.data;
       })["catch"](function (error) {

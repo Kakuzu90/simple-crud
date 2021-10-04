@@ -311,7 +311,6 @@
 
             dynamicSort(key, sort) {
 
-                let local = this.search ? this.search : '*';
                 // return function (a, b) {
                 //     if (sort == 1) {
                 //         return a[key].localeCompare(b[key]);
@@ -319,6 +318,8 @@
                 //         return b[key].localeCompare(a[key]);
                 //     }
                 // }
+
+                let local = this.search ? this.search : '*';
 
                 this.axios.get(`/api/search/${local}/${key}/${sort}`)
                 .then((result) => {
